@@ -9,17 +9,21 @@ Before installation, block the below domains at `/etc/hosts`:
 0.0.0.0 mirrors.linuxeye.com
 0.0.0.0 mirrors.oneinstack.com
 ```
-```
-# Block Oneinstack untrusted domains
-echo "0.0.0.0 mirrors.linuxeye.com" | sudo tee -a /etc/hosts
-echo "0.0.0.0 mirrors.oneinstack.com" | sudo tee -a /etc/hosts
-```
+
 ## Installation
 
 ```bash
 wget https://github.com/hifocus/CleanInStack/releases/download/0.0.0/cleaninstack-full.tar.gz
 md5sum cleaninstack-full.tar.gz
+```
 
+```
+# Block Oneinstack untrusted domains
+echo "0.0.0.0 mirrors.linuxeye.com" | sudo tee -a /etc/hosts
+echo "0.0.0.0 mirrors.oneinstack.com" | sudo tee -a /etc/hosts
+```
+
+```
 # if the result is b2947bac8cb66d54fcd90d30e406598f
 tar -xzf cleaninstack-full.tar.gz
 ./oneinstack/install.sh
