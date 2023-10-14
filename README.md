@@ -9,7 +9,11 @@ Before installation, block the below domains at `/etc/hosts`:
 0.0.0.0 mirrors.linuxeye.com
 0.0.0.0 mirrors.oneinstack.com
 ```
-
+```
+# Block Oneinstack untrusted domains
+echo "0.0.0.0 mirrors.linuxeye.com" | sudo tee -a /etc/hosts
+echo "0.0.0.0 mirrors.oneinstack.com" | sudo tee -a /etc/hosts
+```
 ## Installation
 
 ```bash
