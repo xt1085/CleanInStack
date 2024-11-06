@@ -25,6 +25,8 @@ echo "0.0.0.0 mirrors.oneinstack.com" | sudo tee -a /etc/hosts
 
 ```
 # if the result is b2947bac8cb66d54fcd90d30e406598f
+# 安装 zlib 库
+apt update -y && apt install zlib1g-dev -y
 tar -xzf cleaninstack-full.tar.gz
 ./oneinstack/install.sh
 ```
