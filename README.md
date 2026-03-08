@@ -17,12 +17,10 @@ wget https://github.com/hifocus/CleanInStack/releases/download/0.0.0/cleaninstac
 md5sum cleaninstack-full.tar.gz
 
 MD5=$(md5sum cleaninstack-full.tar.gz | awk '{print $1}')
-
 if [ "$MD5" != "b2947bac8cb66d54fcd90d30e406598f" ]; then
     echo "MD5 校验失败！当前值：$MD5"
     exit 1
 fi
-
 echo "MD5 校验正常：$MD5"
 
 # Block Oneinstack untrusted domains
