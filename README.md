@@ -32,3 +32,7 @@ tar -xzf cleaninstack-full.tar.gz
 ```
 
 Reference: https://github.com/oneinstack/oneinstack/issues/487
+
+nginx make -j1 && make install
+memory THREAD=1
+check_os
