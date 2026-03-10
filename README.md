@@ -35,8 +35,13 @@ tar -xzf cleaninstack-full.tar.gz
 ./oneinstack/install.sh
 ```
 
-Reference: https://github.com/oneinstack/oneinstack/issues/487
 
-nginx make -j1 && make install
-memory THREAD=1
-check_os
+```
+> /root/oneinstack/include/check_os.sh
+sed -i 's/make -j ${THREAD}/make -j1/g' /root/oneinstack/include/nginx.sh
+FILE=/root/oneinstack/include/memory.sh
+grep -q '^THREAD=1$' $FILE || \
+sed -i "/Swap=\`free -m | awk '\/Swap:\/{print \$2}'\`/a THREAD=1" $FILE
+```
+
+Reference: https://github.com/oneinstack/oneinstack/issues/487
