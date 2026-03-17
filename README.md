@@ -51,6 +51,10 @@ include/check_sw.sh
 config error parsing file failed
 ```
 
+```
+apt update && apt install -y build-essential libxml2-dev libssl-dev zlib1g-dev libcurl4-openssl-dev libjpeg-dev libpng-dev libfreetype6-dev libonig-dev libzip-dev libsqlite3-dev pkg-config libbz2-dev libgd-dev libxslt1-dev
+```
+
 Reference: https://github.com/oneinstack/oneinstack/issues/487
 
 
