@@ -44,4 +44,14 @@ grep -q '^THREAD=1$' $FILE || \
 sed -i "/Swap=\`free -m | awk '\/Swap:\/{print \$2}'\`/a THREAD=1" $FILE
 ```
 
+```
+apt update
+apt install -y lsof
+include/check_sw.sh
+config error parsing file failed
+```
+
 Reference: https://github.com/oneinstack/oneinstack/issues/487
+
+
+
